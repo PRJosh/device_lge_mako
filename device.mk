@@ -38,8 +38,15 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += \
 	lights.mako
 
+
 PRODUCT_PACKAGES += \
-	charger_res_images
+    charger_res_images
+
+TARGET_PREBUILT_KERNEL := device/lge/mako/kernel
+LOCAL_KERNEL := device/lge/mako/kernel
+
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
 	device/lge/mako/WCNSS_cfg.dat:system/vendor/firmware/wlan/prima/WCNSS_cfg.dat \
